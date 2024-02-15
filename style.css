@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+     }
+h1 {
+    color: red;
+    margin-top: -50px;
+}
+img {
+    max-width: 500px;
+    height: auto;
+    margin-left: 20px; 
+}
+p
+{
+    text-align: justify;
+}
+.bio {
+    flex-grow: 1;
+    margin-right: 20px; 
+
+}
+
+.bio h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.bio p {
+    font-size: 16px;
+    color: #666;
+}
+.important-things {
+    margin-top: 40px;
+}
+
+.important-things h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-item {
+    flex-basis: 23%; /* Ajusta este valor según el espacio deseado entre las imágenes */
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: space-around; /* Distribuir elementos equitativamente */
+    flex-wrap: wrap; /* Envolver elementos en varias líneas si es necesario */
+}
+
+.image-container > div {
+    flex-basis: calc(25% - 20px); /* Ancho del contenedor, 25% con margen */
+    margin: 10px; /* Margen entre los contenedores */
+    text-align: center;
+    margin-right: 10px
+}
+
+
+.santi{
+    width: 50px; /* Ancho máximo deseado para la imagen */
+    height: 5px;
+     /* Altura ajustada automáticamente para mantener la proporción */
+}
+.perfil{
+    margin-right: 500px; /* Ajusta el valor del margen según tus necesidades */
+}
+.cancion{
+    margin-right: 200px; /* Ajusta el valor del margen según tus necesidades */
+}
