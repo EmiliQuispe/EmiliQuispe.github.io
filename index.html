@@ -1,68 +1,461 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mi Blog</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos adicionales */
+    /* Puedes agregar estilos personalizados aquí */
+    .center-vertical {
+      display: flex;
+      align-items: center;
+
+    }
+   
+    .center-vertical {
+      display: flex;
+      align-items: center;
+    }
+    footer {
+      background-color: #212529; /* Fondo oscuro para el footer */
+      color: #ffffff; /* Texto blanco para el footer */
+      padding: 20px 0;
+      text-align: center;
+    }
+    .portfolio-img {
+        height: 300px; /* Establece la altura fija */
+        object-fit: cover; /* Mantiene la relación de aspecto y corta la imagen si es necesario */
+    }
+    .services-img {
+        height: 300px; /* Establece la altura fija */
+        object-fit: cover; /* Mantiene la relación de aspecto y corta la imagen si es necesario */
+    }
+     /* Estilos para el tema oscuro */
+     body.dark-mode {
+      background-color: #212529;
+      color: #ffffff;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+    .navbar-dark .navbar-toggler-icon {
+      background-color: #ffffff;
+    }
+    .btn-dark {
+      background-color: #343a40;
+      border-color: #343a40;
+    }
+    
+    /* Estilos para el tema claro */
+    body.light-mode {
+      background-color: #ffffff;
+      color: #212529;
+    }
+    .navbar-light .navbar-nav .nav-link {
+      color: #212529;
+    }
+    .navbar-light .navbar-toggler-icon {
+      background-color: #212529;
+    }
+    .btn-light {
+      background-color: #f8f9fa;
+      border-color: #f8f9fa;
+    }
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #343a40;
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: #ffffff !important;
+    }
+    .navbar-toggler-icon {
+      background-color: #ffffff;
+    }
+    .navbar-dark .navbar-toggler:focus, .navbar-dark .navbar-toggler:active {
+      outline: none;
+    }
+    section {
+      padding: 50px 0;
+    }
+    #copyright {
+  color: #ffffff; /* Color blanco */
+    }
+    h2 {
+      color: #512e5f; /* Violeta pastel */
+      border-bottom: 2px solid #0a8a3f; /* Borde blanco de 2px en la parte inferior */
+      padding-bottom: 5px;
+      -webkit-text-stroke: 0.5px #4834fa; /* Borde blanco de 1px alrededor del texto */
+      
+    }
+    h3{
+      color: #1a5276;
+    }
+    h3 , h2{
+     font-weight: bold; /* Hace que la letra sea más gruesa */
+    }
+
+    p {
+      color:#101820; /* Azul pastel */
+    }
+    .btn-primary {
+      background-color: #343a40;
+      border-color: #343a40;
+    }
+    .btn-primary:hover {
+      background-color: #212529;
+      border-color: #212529;
+    }
+
+   
+  </style>
 </head>
 <body>
-<header>
-    <div class="container">
-        <div class="bio">
-            <h1 class="titulo">Bienvenidos a mi Blog</h1>
-            <p>Mi nombre es Emili Quispe , tengo 22 años  actualmente estoy cursando mi ultimo semestre <br> de la Carrera de Ing Empresarial
-               tengo 2 hermanos , vivo en la ciudad de Cochabamba.
-               Mis <br>pasatiempos son la musica y mis mascotas , tengo 2 gatitas y dos perritos .
-               Me encanta pasar<br> tiempo con mi hermanito Santiago el tiene 5 años y ambos siempre que podemos estamos <br> juntos ,  jugando , 
-               aprendiendo o simplemente escuchando musica 
-            </p>
-        </div>
-        <div class="perfil">
-        <img src="perfil.jpg" alt="Mi perfil">
-        </div>
-    </div>
-    <section class="important-things">
-        <h2>A continuación te presento agunos datos importantes sobre Mi</h2>
-        <div class="image-container">
-            <div class="cancion">
-                <p>MI CANCION FAV </p>
-                    
-                <img src="abel pintos.jpg" alt="Imagen 1">
 
-                <p>
-                 SIN PRINCIPIO NI FINAL <br>
-                 Abel Pintos    
-                </p>
-            </div>
-            <div class="plato">
-                <p>MI COMIDA FAV </p>
-                <img src="comida.jpg" alt="Imagen 2">
-                <p> 
-                 PASTA AL PESTO<br>
-                 Soy amante de las pastas y sobre todo de la pasta al pesto
-                </p>
-            </div>
-            <div class="libro">
-                <p>MI LIBRO FAV </p>
-                <img src="libros.jpg" alt="Imagen 3">
-                <p>LOS PATITOS FEOS </p>
-                <p>Este libro es uno de mis favoritos
-                    ya que me enseño mucho sobre la resilencia
-                </p>
-            </div>
-            <div class="santi">
-                <p>MI PERSONA FAV </p>
-                <img src="santi.jpg" alt="Imagen 4">
-                <p>Desde que nacio Santi me ha enseñado lo grande que puedo llegar a ser 
-                    el amor , el me enseño muchas cosas , mas de de lo que yo podria enseñarle a el 
-                    tenemos la conexion mas increible de todas , por eso y por muchas cosas mas mi hermano 
-                    es mi persona fav.
-                </p>
-            </div>
-        </div>
-    </section>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Mi Portafolio</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="#about">Acerca de mí</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Resumen de habilidades</a></li>
+      <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+      <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+      <li class="nav-item">
+        <button id="themeToggle" class="btn btn-dark">Tema oscuro</button>
+      </li>
+    </ul>
     
-</header>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <section id="about">
+    <h2>ACERCA DE MI</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="center-vertical">
+          <div>
+            <h3>Emili Quispe</h3>
+            <p class="text-justify">Tengo 22 años y actualmente estoy cursando mi último semestre de la carrera de Ingeniería Empresarial. Aunque aún no tengo experiencia laboral formal, estoy dedicado a adquirir habilidades y conocimientos relevantes para mi campo de estudio. Soy una persona comprometida, motivada y siempre estoy dispuesto a enfrentar nuevos desafíos. Mi pasión por el emprendimiento y la gestión empresarial me impulsa a explorar diversas áreas dentro de mi disciplina y a buscar oportunidades de crecimiento personal y profesional. Estoy abierto a aprender y colaborar con otros para alcanzar metas comunes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="me.jpg" alt="Emili Quispe" class="img-fluid"  width="200" height="500" style="margin-left: -8s0px;">
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <!-- Sección Habilidades -->
+    <h2 class="text-center">HABILIDADES</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="habilidad1.png" alt="PROGRAMACION" class="img-fluid" style="max-width: 300px;">
+      </div>
+      <div class="col-md-6 center-vertical">
+        <div>
+          <h3>Programacion y Analisis de Datos</h3>
+          <p>Poseo  habilidades en programación en lenguajes como C++ y Python, lo que me permite desarrollar soluciones eficientes y escalables para una variedad de problemas. Además, tengo conocimiento en análisis de datos utilizando herramientas como Excel, Python, SQL y R</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="habilidad2.png" alt="EMPRENDIMEINTO" class="img-fluid" style="max-width: 300px;">
+      </div>
+      <div class="col-md-6 center-vertical">
+        <div>
+          <h3>Habilidad de Emprendimiento </h3>
+          <p>Durante  mi carrera, tuve el privilegio de cursar materias centradas en el ámbito del emprendimiento, el estudio de mercado, el marketing y el desarrollo de productos y servicios. Estas experiencias académicas me brindaron una sólida comprensión de los fundamentos empresariales y me permitieron desarrollar habilidades clave en el área.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="habilidad3.png" alt="COMUNICAION" class="img-fluid" width="500" style="max-width: 300px;">
+      </div>
+      <div class="col-md-6 center-vertical">
+        <div>
+          <h3>Habilidad de Comunicacion</h3>
+          <p>Me considero una persona comunicativa que disfruta compartiendo ideas y opiniones. Tengo facilidad para trabajar en equipo, integrarme rápidamente en nuevos ambientes y establecer relaciones efectivas con los demás. Valorando la colaboración y el intercambio de ideas, me considero un miembro positivo y contribuyente en cualquier entorno de trabajo. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+</div>
+</div>
+<div class="container-fluid">
+    <section id="portfolio">
+      <h2 class="text-center">Portafolio</h2>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="proyecto1.jpg" alt="Proyecto 1" class="portfolio-img img-fluid mb-2" style="max-width: 100%;">
+          <h3 class="text-center">BIO REVIVAL - Cosmética Ecológica</h3>
+          <p class="text-justify">BIO REVIVAL es un emprendimiento de cosmética ecológica creado durante la materia de Emprendimientos. En colaboración con tres amigas, desarrollamos un labial hidratante  y  suero de pestañas desde cero , empezamos con este emprendimiento desde la eleccion del nombre , hasta la fabricacion y venta de los productos .</p>
+          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal1">Ver</button>
+        </div>
+        <div class="col-md-4 text-center">
+          <img src="proyecto2.jpg" alt="Proyecto 2" class="portfolio-img img-fluid mb-2" style="max-width: 100%;">
+          <h3 class="text-center">Programa de Adopcion de Perritos </h3>
+          <p class="text-justify">Tuve la oportunidad de participar en el proyecto de adopcion de perritos. Dentro este proyecto yo en conjunto con mi equipo nos encargamos de ser los relacionadores entre la gente y la institucion a la cual apoyamos , nuestra funcion fue la de gestionar y planificar las visitas de las peronas interesadas en adoptar </p>
+          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal2">Ver</button>
+        </div>
+        <div class="col-md-4 text-center">          
+           <img src="proyecto3.jpg" alt="Proyecto 3" class="portfolio-img img-fluid mb-2" style="max-width: 100%;">
+          <h3 class="text-center">Proyecto de Grado</h3>
+          <p class="text-justify">Actualmente voy cursando la meteria de taller 1 , en la cual a lo largo del semtre desarrollare mi proyecto de grado , la orientacion del mismo es hacia el analisis de factibilidad de la expansion de una empresa , proyecto en el cual aplicare todos los conociemientos adquiridos a lo largo de mi carrera Universitaria  .</p>
+          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modal3">Ver</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Modales -->
+  <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal1Label">Proyecto 1</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Contenido del proyecto 1.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal2Label">Proyecto 2</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Contenido del proyecto 2.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal3Label">Proyecto 3</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Contenido del proyecto 3.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="services">
+    <h2 class="text-center">Servicios</h2>
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center">
+        <img src="servicio1.jpg" alt="Servicio 1" class="services-img img-fluid mb-2" style="max-width: 100%;">
+        <h3 class="text-center ">Consultoria Empresarial</h3>
+        <p class="text-justify">brindar asesoramiento en estrategias empresariales, desarrollo de productos y servicios, así como en análisis de mercado..</p>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalService1">Ver</button>
+      </div>
+      <div class="col-md-4">
+        <img src="servicio2.png" alt="Servicio 2" class="services-img img-fluid mb-2" style="max-width: 100%;">
+        <h3 class="text-center">  Analisis de Datos</h3>
+        <p class="text-justify">Ofrecer servicios de análisis de datos utilizando herramientas como Excel, SQL y R, para poder ayudar en la toma de decisiones empresariales.</p>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalService2">Ver</button>
+      </div>
+      <div class="col-md-4">
+        <img src="servicio3.jpg" alt="Servicio 3" class="services-img img-fluid mb-2" style="max-width: 100%;">
+        <h3 class="text-center">Estrategias de Innovacion</h3>
+        <p class="text-justify">Colaborar en la generación de ideas innovadoras para productos, servicios y ayudar en la implementación de estrategias de innovación.</p>
+        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modalService3">Ver</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modales -->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modal1Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal1Label">Proyecto 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del proyecto 1.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="modal2Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal2Label">Proyecto 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del proyecto 2.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="modal3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal3Label">Proyecto 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del proyecto 3.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalService1" tabindex="-1" role="dialog" aria-labelledby="modalService1Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalService1Label">Servicio 1</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del servicio 1.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalService2" tabindex="-1" role="dialog" aria-labelledby="modalService2Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalService2Label">Servicio 2</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del servicio 2.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalService3" tabindex="-1" role="dialog" aria-labelledby="modalService3Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalService3Label">Servicio 3</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Contenido del servicio 3.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+ <section id="contact">
+    <h2 class="text-center">Contacto</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba su mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p id="copyright">2024 Derechos de autor &copy; Emili Quispe</p>
+    </div>
+  </footer>
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+<script>
+   document.getElementById("themeToggle").addEventListener("click", function() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+    body.classList.toggle("light-mode");
+  });
+  </script>
 </body>
 </html>
